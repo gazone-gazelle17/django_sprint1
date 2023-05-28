@@ -1,0 +1,23 @@
+{% extends base.html %}
+{% load static %}
+{% block title %}
+  {{ posts.location }}. {{ posts.date }}
+{% endblock %}
+{% block content %}
+        <article>
+          <ul>
+            <li>
+              Место: {{ posts.location }}            
+            </li>
+            <li>
+              Дата: {{ posts.date }}
+            </li>
+            <li>
+              Категория: <a href="{% url 'blog:post_detail' id=posts.id %}">not-my-day</a>
+            </li>
+          </ul>         
+          <p>
+            {{ posts.text|linebrakesbr }}
+          </p>          
+        </article>                
+{% endblock %}
