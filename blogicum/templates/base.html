@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <title>
       {% block title %}
-      Наши правила
+        Наши правила
       {% endblock %}
     </title>
   </head>
@@ -19,9 +19,9 @@
     {% include 'includes/header.html' %}
   <main>
     <div class="container py-5">
-    {% block content %}
-    Если контет есть, то он будет здесь.
-    {% endblock %}
+      {% block content %}
+        Если контет есть, то он будет здесь.
+      {% endblock %}
     </div>
   </main>
      {% include 'includes/footer.html' %}
