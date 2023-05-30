@@ -1,4 +1,6 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
+
+from django.http import Http404
 
 posts = [
     {
@@ -50,14 +52,16 @@ def index(request):
     return render(request, template, context)
 
 
-def post_detail(request, id):
+def post_detail(request, post_id):
     template = 'blog/detail.html'
 
-    if id >= 0 and id < len(posts) and posts[id] is not None:
-        context = {'post': posts[id]}
+    post_generator = {post['id']: post for post in posts}
+    if post_id in post_generator:
+        context = {'post': post_generator[post_id]}
         return render(request, template, context)
     else:
-        return HttpResponse('Запись не найдена')
+        raise Http404('Страница не найдена, поскольку запись с '
+                      'запрашиваемым id отсутствует в базе записей.')
 
 
 def category_posts(request, category_slug):
