@@ -23,17 +23,24 @@ ___
 ___
 
 Клонируйте репозиторий на свой локальный компьютер:
+'''
 git clone https://github.com/your_username/blog_app.git
-
+'''
 Создайте и активируйте виртуальное окружение:
+'''
 python3 -m venv venv
 source venv/bin/activate
+'''
 
 Установите зависимости из файла requirements.txt:
+'''
 pip install -r requirements.txt
+'''
 
 Запустите локальный сервер:
+'''
 python manage.py runserver
+'''
 
 Откройте браузер и перейдите по адресу http://127.0.0.1:8000/ для просмотра приложения.
 
