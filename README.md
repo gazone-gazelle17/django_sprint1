@@ -24,7 +24,7 @@ ___
 
 Клонируйте репозиторий на свой локальный компьютер:
 ```
-git clone https://github.com/your_username/blog_app.git
+git clone git@github.com:gazone-gazelle17/django_sprint1.git
 ```
 Создайте и активируйте виртуальное окружение:
 ```
